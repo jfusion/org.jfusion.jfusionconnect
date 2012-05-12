@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<name>JFusionConnect</name>
+	<description>Edit App</description>
+	<layout title="Edit" hidden="true">
+		<message>
+			<![CDATA[Show Edit Form]]>
+		</message>
+	</layout>
+</metadata>

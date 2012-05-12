@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<name>JFusionConnect</name>
+	<description>Show Log Info for a user</description>
+	<layout title="User Log">
+		<message>
+			<![CDATA[Used to display Log info]]>
+		</message>
+	</layout>
+</metadata>

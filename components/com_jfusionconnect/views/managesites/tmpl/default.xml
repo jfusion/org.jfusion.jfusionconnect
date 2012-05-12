@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<name>JFusionConnect</name>
+	<description>Edit Form</description>
+	<layout title="Edit Form">
+		<message>
+			<![CDATA[Show Edit Form]]>
+		</message>
+	</layout>
+</metadata>

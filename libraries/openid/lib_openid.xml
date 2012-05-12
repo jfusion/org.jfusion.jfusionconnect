@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="library" version="1.6" method="upgrade">
+	<name>OpenID</name>
+	<libraryname>openid</libraryname>
+	<description>Library OpenID</description>
+	<creationDate>July 2011</creationDate>
+	<author>Morten Hundevad</author>
+	<authorEmail>webmaster@jfusion.org</authorEmail>
+	<authorUrl>http://jfusion.org</authorUrl>
+	<copyright>(C) 2011 Copyright Info</copyright>
+	<license>http://www.apache.org/licenses/LICENSE-2.0</license>
+	<version>1.0</version>
+	<packager>JFusion</packager>
+	<packagerurl>http://jfusion.org</packagerurl>
+	<files>
+		<folder>Auth</folder>
+		<file>CHANGELOG</file>
+		<file>CHANGES-2.1.0</file>
+		<file>consumer.php</file>
+		<file>COPYING</file>
+		<file>index.html</file>
+		<file>NEWS</file>
+		<file>README</file>
+	</files>
+</extension>

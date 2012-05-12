@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<name>JFusionConnect</name>
+	<description>Login Form</description>
+	<layout title="Login">
+		<message>
+			<![CDATA[Show Login Form]]>
+		</message>
+	</layout>
+</metadata>

@@ -1,0 +1,62 @@
+/**
+* @package JFusionConnect
+* @subpackage Views
+* @author JFusion development team
+* @copyright Copyright (C) 2008 JFusion. All rights reserved.
+* @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
+
+
+padding-<left|right>: <width of image>px;
+	background-image: url(../images/error.png);
+*/
+
+#jfusionconnect .sitelogo {
+    float: right;
+	image: url(../images/openidlogo.png);
+}
+
+#jfusionconnect button .submit {
+	background-image: url(../images/tick.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 20px;
+}
+
+#jfusionconnect button .cancel {
+	background-image: url(../images/arrow_undo.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 20px;
+}
+
+#jfusionconnect button .update {
+	background-image: url(../images/arrow_rotate_clockwise.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 20px;
+}
+
+#jfusionconnect .openid {
+	background-image: url(../images/jfusionconnect.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 20px;
+}
+
+#jfusionconnect .loginform {
+	width: 500px;
+}
+
+#jfusionconnect .password {
+	background-image: url(../images/key.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 20px;
+}
+
+#jfusionconnect .username {
+	background-image: url(../images/status_online.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 20px;
+}
