@@ -76,7 +76,9 @@ class jfusionconnectViewuserlog extends JView
 						
 			$filter_ipadress = $mainframe->getUserStateFromRequest( "global.filter_ipadress", 'filter_ipadress', 0, 'string' );
 			$filter_realm = $mainframe->getUserStateFromRequest( "global.filter_realm", 'filter_realm', 0, 'string' );
-			
+			$realm = new JURI(base64_decode($filter_realm));
+			$filter_realm = $realm->getHost();
+
 			$logInstance =& JFusionConnectLog::getInstance();
 			$where = 'userid = '.$user->id;
 
@@ -84,17 +86,17 @@ class jfusionconnectViewuserlog extends JView
 			$ipadresslist = $logInstance->getIPList($where);
 
 			if ($filter_status) {
-   				$where .= ' AND status = '.$db->Quote($filter_status);
+				$where .= ' AND status = '.$db->Quote($filter_status);
 			}
 
 			$listrealm[] = JHTML::_('select.option',  0, '- '. JText::_( 'SELECT_SITE' ) .' -');
 			foreach ($realmlist as $value) {
-				$value->realm = strpos($value->realm ,'?') ? substr ( $value->realm , 0 ,strpos($value->realm ,'?') ) : $value->realm;				
+				$value->realm = strpos($value->realm ,'?') ? substr ( $value->realm , 0 ,strpos($value->realm ,'?') ) : $value->realm;
 				$listrealm[] = JHTML::_('select.option', base64_encode($value->realm), $value->realm);
 			}
-			$lists['realm'] = JHTML::_('select.genericlist', $listrealm, 'filter_realm', 'class="inputbox" size="1" onchange="document.adminForm.submit( );"', 'value', 'text', $filter_realm );
+			$lists['realm'] = JHTML::_('select.genericlist', $listrealm, 'filter_realm', 'class="inputbox" size="1" onchange="document.adminForm.submit( );"', 'value', 'text', base64_encode($filter_realm) );
 			if ($filter_realm) {
-   				$where .= ' AND realm = '.$db->Quote(base64_decode($filter_realm));
+				$where .= ' AND realm = '.$db->Quote($filter_realm);
 			}
 			if ($filter_ipadress) {
    				$where .= ' AND ipadress = '.$db->Quote($filter_ipadress);

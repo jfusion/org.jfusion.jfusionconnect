@@ -104,7 +104,7 @@ class JFusionconnectController extends JController
      */
     function cancelsettings()
     {
-        $this->setRedirect('index.php?option=com_jfusionconnect&view=cpanel', $msg, $msgType);
+        $this->setRedirect('index.php?option=com_jfusionconnect&view=cpanel');
     }
     
 	/**
@@ -116,9 +116,9 @@ class JFusionconnectController extends JController
     {
     	$cid = JRequest::getVar('cid');
     	if ($cid[0]) {
-        	$this->setRedirect('index.php?option=com_jfusionconnect&view=site&task=edit&id='.$cid[0], $msg, $msgType);
+        	$this->setRedirect('index.php?option=com_jfusionconnect&view=site&task=edit&id='.$cid[0]);
     	} else {
-        	$this->setRedirect('index.php?option=com_jfusionconnect&view=sites'.$cid[0], $msg, $msgType);
+        	$this->setRedirect('index.php?option=com_jfusionconnect&view=sites'.$cid[0]);
     	}
     }    
     
@@ -131,7 +131,7 @@ class JFusionconnectController extends JController
      */
     function addsite()
     {
-        $this->setRedirect('index.php?option=com_jfusionconnect&view=site&task=add', $msg, $msgType);
+        $this->setRedirect('index.php?option=com_jfusionconnect&view=site&task=add');
     }
     
 	/**
@@ -148,7 +148,7 @@ class JFusionconnectController extends JController
     		$site = JFusionConnectSite::getInstance($value);
     		$site->delete();
     	}
-        $this->setRedirect('index.php?option=com_jfusionconnect&view=sites', $msg, $msgType);
+        $this->setRedirect('index.php?option=com_jfusionconnect&view=sites');
     }    
     
 	/**
@@ -167,13 +167,13 @@ class JFusionconnectController extends JController
 
     	if ($id) {
     		if (!$realm) {
-    			$this->setRedirect('index.php?option=com_jfusionconnect&view=site&task=edit&id='.$id, $msg, $msgType);
+    			$this->setRedirect('index.php?option=com_jfusionconnect&view=site&task=edit&id='.$id);
 				return;
     		}
     		$site = JFusionConnectSite::getInstance($id);
     	} else {
     		if (!$realm) {
-    			$this->setRedirect('index.php?option=com_jfusionconnect&view=site&task=task=add', $msg, $msgType);
+    			$this->setRedirect('index.php?option=com_jfusionconnect&view=site&task=task=add');
     			return;
     		}
     		$site = JFusionConnectSite::getInstance();
@@ -190,6 +190,6 @@ class JFusionconnectController extends JController
     	$data['params'] = $reg->toString();
     	
     	$site->add($data);
-        $this->setRedirect('index.php?option=com_jfusionconnect&view=sites', $msg, $msgType);
+        $this->setRedirect('index.php?option=com_jfusionconnect&view=sites');
     }    
 }

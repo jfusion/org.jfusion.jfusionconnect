@@ -172,7 +172,7 @@ class JFusionconnectControllerFrontEnd extends JController
         $result = $db->loadObjectList();
         if ($result) {
 	    	foreach ($result as $key => $value) {
-	    		if (isset($site['remember'][$value->id]) || $site['remember'][$value->id] == 'on') {
+	    		if (isset($site['remember'][$value->id]) && $site['remember'][$value->id] == 'on') {
 	    			$site['remember'][$value->id] = true;
 	    		} else {
 	    			$site['remember'][$value->id] = false;
