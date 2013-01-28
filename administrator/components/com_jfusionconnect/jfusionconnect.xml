@@ -42,6 +42,7 @@
 		<filename>index.html</filename>
 		<filename>jfusionconnect.php</filename>
 		<filename>server.php</filename>
+        <filename>router.php</filename>
 		<folder>controllers</folder>
 		<folder>views</folder>
 		<folder>css</folder>
