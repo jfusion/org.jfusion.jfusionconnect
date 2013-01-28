@@ -45,6 +45,8 @@ class JFusionconnectControllerFrontEnd extends JController
 		
 		$server =& JFusionConnect::getServer();
 		$request = JFusionConnect::getRequest();
+
+		$msg  = $msgType = null;
     	if (!Auth_OpenID_isError($request)) {
     		if (in_array($request->mode, array('checkid_immediate', 'checkid_setup'))) {
 				$password = JRequest::getVar('password');     			

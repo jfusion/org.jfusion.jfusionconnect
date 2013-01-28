@@ -59,10 +59,12 @@ class JFusionConnect
 			}
 			$openidsite =& JURI::getInstance(JFusionConnect::getOpenIDSiteURL().$openidprefix);
 
+			$url = $u->toString($parts = array('scheme', 'user', 'pass', 'host', 'port', 'path'));
+
 			$path = $openidsite->toString();
-			if (strpos ($u->toString(), $path) ===0 ) {
+			if (strpos ($url, $path) ===0 ) {
 				$length = strlen($path);
-				$userid = substr($u->toString(), $length);
+				$userid = substr($url, $length);
 			}
 		} else {
 			if (!$openidprefix) {
