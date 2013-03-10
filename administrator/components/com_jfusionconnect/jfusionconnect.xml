@@ -84,7 +84,6 @@
 		<!-- Administration Language File Copy Section -->
 		<languages folder="admin/languages">
 			<language tag="en-GB">en-GB/en-GB.com_jfusionconnect.ini</language>
-            <language tag="en-GB">en-GB/en-GB.plg_system_jfusionconnect.ini</language>			
 		</languages>
 	</administration>
 </install>
